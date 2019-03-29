@@ -1,4 +1,3 @@
-
 public class Main {
 
 	public static int N1 = 1000;
@@ -20,7 +19,6 @@ public class Main {
 		double Q1sumTime1=0,Q1sumTime2=0,Q1sumTime3=0;
 		double Q2sumTime1=0,Q2sumTime2=0,Q2sumTime3=0;
 		double Q3sumTime1=0,Q3sumTime2=0,Q3sumTime3=0;
-
 
 		for(int i=0;i<10;i++) {
 			data_ran=madeRandom(N1);
@@ -97,9 +95,9 @@ public class Main {
 		data_rev3 = madeReverse(N3);
 		System.out.print("Quick1\t\t"+Q1sumTime1/10000);
 		System.out.print("\t\t"+QuickSort1.Quick1Time(data_rev, N1)/1000);
-		System.out.print("\t\t"+Q1sumTime1/10000);
+		System.out.print("\t\t"+Q1sumTime2/10000);
 		System.out.print("\t\t"+QuickSort1.Quick1Time(data_rev2, N2)/1000);
-		System.out.println("\t\t"+Q1sumTime1/10000);
+		System.out.println("\t\t"+Q1sumTime3/10000);
 //		System.out.println("\t\t"+QuickSort1.Quick1Time(data_rev3, N3)/1000); //스택 오버플로우
 		data_rev = madeReverse(N1);
 		data_rev2 = madeReverse(N2);
@@ -138,6 +136,4 @@ public class Main {
 		}
 		return data_ran;
 	}
-
-
 }
