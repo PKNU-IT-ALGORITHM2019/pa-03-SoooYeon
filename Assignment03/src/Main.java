@@ -67,7 +67,7 @@ public class Main {
 			
 			Q1sumTime1 += QuickSort1.Quick1Time(data_ran, N1);
 			Q1sumTime2 += QuickSort1.Quick1Time(data_ran2, N2);
-//			Q1sumTime3 += QuickSort1.Quick1Time(data_ran3, N3);  //스택 오버플로우
+			Q1sumTime3 += QuickSort1.Quick1Time(data_ran3, N3);  
 			
 			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
 			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
