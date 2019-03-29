@@ -129,7 +129,7 @@ public class Main {
 		System.out.print("\t\t"+Q1sumTime2/10000);
 		System.out.print("\t\t"+QuickSort1.Quick1Time(data_rev2, N2)/1000);
 		System.out.println("\t\t"+Q1sumTime3/10000);
-//		System.out.println("\t\t"+QuickSort1.Quick1Time(data_rev3, N3)/1000); //스택 오버 
+//		System.out.println("\t\t"+QuickSort1.Quick1Time(data_rev3, N3)/1000); //스택 오버 플로우 
 		data_rev = madeReverse(N1);
 		data_rev2 = madeReverse(N2);
 		data_rev3 = madeReverse(N3);
