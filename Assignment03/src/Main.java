@@ -6,7 +6,11 @@ public class Main {
 	public static int [] data_ran = new int [N1];
 	public static int [] data_ran2 = new int [N2];	
 	public static int [] data_ran3 = new int [N3];
-
+	
+	public static int [] data_tmpran = new int [N1];
+	public static int [] data_tmpran2 = new int [N2];	
+	public static int [] data_tmpran3 = new int [N3];
+	
 	public static int [] data_rev = new int [N1];
 	public static int [] data_rev2 = new int [N2];
 	public static int [] data_rev3 = new int [N3];
@@ -25,34 +29,61 @@ public class Main {
 			data_ran2=madeRandom(N2);
 			data_ran3=madeRandom(N3);
 			
+			System.arraycopy(data_ran, 0, data_tmpran, 0, N1);
+			System.arraycopy(data_ran2, 0, data_tmpran2, 0, N2);
+			System.arraycopy(data_ran3, 0, data_tmpran3, 0, N3);
+
 			BsumTime1 += BubbleSort.bubbleSort(data_ran,N1);
 			BsumTime2 += BubbleSort.bubbleSort(data_ran2,N2);
 			BsumTime3 += BubbleSort.bubbleSort(data_ran3,N3);
 			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+
 			SsumTime1 += SelectionSort.selectionSort(data_ran, N1);
 			SsumTime2 += SelectionSort.selectionSort(data_ran2, N2);
 			SsumTime3 += SelectionSort.selectionSort(data_ran3, N3);
 			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+			
 			IsumTime1 += InsertionSort.insertionSort(data_ran, N1);
 			IsumTime2 += InsertionSort.insertionSort(data_ran2, N2);
 			IsumTime3 += InsertionSort.insertionSort(data_ran3, N3);
-
+			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+			
 			MsumTime1 += MergeSort.mergeTime(data_ran, N1);
 			MsumTime2 += MergeSort.mergeTime(data_ran2, N2);
 			MsumTime3 += MergeSort.mergeTime(data_ran3, N3);
-
+			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+			
 			Q1sumTime1 += QuickSort1.Quick1Time(data_ran, N1);
 			Q1sumTime2 += QuickSort1.Quick1Time(data_ran2, N2);
 //			Q1sumTime3 += QuickSort1.Quick1Time(data_ran3, N3);  //스택 오버플로우
-
+			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+			
 			Q2sumTime1 += QuickSort2.Quick2Time(data_ran, N1);
 			Q2sumTime2 += QuickSort2.Quick2Time(data_ran2, N2);
 			Q2sumTime3 += QuickSort2.Quick2Time(data_ran3, N3);
 			
+			System.arraycopy(data_tmpran, 0, data_ran, 0, N1);
+			System.arraycopy(data_tmpran2, 0, data_ran2, 0, N2);
+			System.arraycopy(data_tmpran3, 0, data_ran3, 0, N3);
+			
 			Q3sumTime1 += QuickSort3.Quick3Time(data_ran, N1);
 			Q3sumTime2 += QuickSort3.Quick3Time(data_ran2, N2);
 			Q3sumTime3 += QuickSort3.Quick3Time(data_ran3, N3);
-
 			}
 		data_rev = madeReverse(N1);
 		data_rev2 = madeReverse(N2);
